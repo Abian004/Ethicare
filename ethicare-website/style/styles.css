@@ -326,52 +326,64 @@ html, body {
 
 
 <!-- Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer -->
-    footer {
+footer {
         background-color: #333333; /* Dark background color */
         color: white;           /* White text color */
         padding: 20px;          /* Padding around the footer content */
         text-align: center;     /* Center-align the text */
-    }
+}
 
-    .footer-container {
-        position: relative;
-        padding: 20px;
-        background: url('../images/footer.png') no-repeat center center;
-        background-size: cover;
-        color: white; /* Ensure text is visible on the image */
-      }
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Horizontally center the content */
+    justify-content: center; /* Vertically center the content */
+    text-align: left; /* Center the text */
+    padding: 20px;
+}
       
-      .footer-container p,
-      .footer-container .social-links {
-        position: relative; /* Ensures text is above the background */
-        z-index: 1; /* Places text above the background */
-      }
+.footer-container p,
+.footer-container .social-links {
+    position: relative; /* Ensures text is above the background */
+    z-index: 1; /* Places text above the background */
+}
       
-      .footer-container::before {
-        text-align: left;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: ; /* Optional: adds a dark overlay to improve text contrast */
-        z-index: 0; /* Places the overlay beneath the text */
-      }
+.footer-container::before {
+    text-align: left;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ; /* Optional: adds a dark overlay to improve text contrast */
+    z-index: 0; /* Places the overlay beneath the text */
+}
       
+.social-links {
+    display: flex;
+    justify-content: center; /* Horizontally center the social icons */
+    align-items: center;     /* Vertically center the social icons */
+    margin-top: 10px;
+}
 
-    .social-links {
-        margin-top: 10px;       /* Space above the social links */
-        text-align: center; /* Center-align the text */
-    }
+.social-icon {
+    margin: 0 10px; /* Add space between the icons */
+}
 
-    .social-icon {
-        margin: 0 10px;         /* Space between the social icons */
-        text-decoration: none;  /* Remove underline */
-        color: #55877e;           /* White text color */
-        font-weight: bold;      /* Bold text */
-    }
+.social-icon-container {
+    text-align: center; /* Horizontally center the content */
+    line-height: 50px;  /* Match the container's height for vertical centering */
+    height: 50px;       /* Set the height of the container */
+}
 
-    .social-icon:hover {
-        color: #4CAF50;         /* Change color on hover */
+.social-icon-image {
+    width: 36px; /* Set the desired width */
+    vertical-align: middle; /* Align the image vertically */
+    display: inline-block;  /* Align items horizontally */
+}
+  
+.social-icon:hover .social-icon-image {
+    filter: brightness(0.8); /* Darken the image on hover */
+    height: auto;           /* Maintain aspect ratio */
 }

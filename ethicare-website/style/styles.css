@@ -30,49 +30,33 @@ header {
 
 /* Navbar Styles */
 .navbar {
+    width: 100%; /* Ensure the navbar spans the full width */
+    background-color: #ee88a9;
     display: flex;
-    justify-content: space-between; /* Space between nav links and hamburger */
-    align-items: center; /* Vertically center items */
-    width: 100%;
-    padding: 0 20px;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Center the navigation links horizontally */
+    padding: 0; /* Remove horizontal padding to reach edges */
     box-sizing: border-box;
-    background-color: #333; /* Background color for navbar */
-    position: relative;
-    z-index: 997; /* Below the hamburger menu */
+    height: 60px; /* Set a fixed height for the navbar */
 }
 
-/* Main Navigation Links */
+/* Container for Navigation Links */
 .navbar ul#nav-links {
     list-style-type: none;
     display: flex;
+    align-items: center; /* Vertically center the links */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Links */
 .navbar ul#nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 12px; /* Reduced padding for multi-line text */
-    display: block;
-    white-space: normal; /* Allow text to wrap */
-    text-align: center; /* Center the text within the link */
-    /* Ensure width is based on content */
-    width: auto;
-    /* Optional: Set a minimum width if desired */
-    min-width: 80px; /* Adjust as needed */
-}
-
-/* Adjust Spacing Between Navbar Items */
-.navbar ul#nav-links li {
-    margin: 0 0.5rem; /* Reduced margin for tighter spacing */
-}
-
-.navbar ul#nav-links li a {
+    display: flex;
+    align-items: center; /* Vertically center the text within the link */
     color: white;
     text-decoration: none;
     padding: 14px 16px;
-    display: block;
+    height: 100%;
 }
 
 .navbar ul#nav-links li a:hover {
@@ -92,7 +76,7 @@ header {
     position: relative;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu Styles */
 .hamburger-menu {
     position: relative;
     display: inline-block;
@@ -184,7 +168,7 @@ footer {
 .social-icons a {
     color: white;
     margin: 0 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -193,9 +177,10 @@ footer {
     overflow: hidden;
     background-color: #ee88a9;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-/* Navbar links */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -205,6 +190,7 @@ footer {
 
 .navbar li {
     flex: 1;
+    margin: 0 10px;
 }
 
 .navbar li a {
@@ -213,6 +199,9 @@ footer {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar li a:hover {

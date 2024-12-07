@@ -3,91 +3,146 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
     <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/about-slideshow.css">
+    <link rel="stylesheet" href="./style/article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nagoda:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <header>
-        <section class="banner">
-            <img src="images/Copy of Header.png" alt="bannerEthicare">
-        </section>
 
-        <nav>
-            <ul class="font-xl">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1MNOMa5NC-9SNNmdTwsev0Bwds31i0MiH/view?usp=drive_link">Booklet</a></li>
+<body>
+
+    <header>
+        <img src="./images/Copy of Header.png" alt="Logo" class="header-logo">
+        <nav class="navbar">
+            <!-- Main Navigation Links -->
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="https://drive.google.com/file/d/1MNOMa5NC-9SNNmdTwsev0Bwds31i0MiH">Our Booklet</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-      
-        <section class="first-section slide-top" style="padding: 20px;">
-            <div class="first-section-content">
-                <h1 class="bold font-xxl">Ethicare Initiatives</h1>
-                <h2 class="italic">Where Morality Meets Wellbeing</h2>
+
+        <section id="home" style="padding-top: 20px; z-index: 1;">
+            <div class="home-container">
+                <div class="overlay"></div>
+                <div class="home-text">
+                    <h2 class="text-5xl bold">Ethicare Initiatives</h2>
+                    <h3 class="text-2xl italic">Where Morality Meets Wellbeing</h3>
+                </div>
             </div>
         </section>
 
-        <section class="second-section">
-            <div>
-                <h2 class="text-center" style="color: #55877e;">Our Activities</h2>
+        <!-- About Section Slideshow -->
+        <section id="about">
+            <h2 class="center white">About Us</h2>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="./images/WhatsApp Image 2024-11-21 at 14.57.26_f49b60ec.jpg" alt="Slide 1" style="width:100%">
+                    <div class="text text-xl">Ethicare Initiatives adalah organisasi nirlaba yang
+                        didedikasikan untuk mempromosikan nilai-nilai moral, etika,
+                        pendidikan dan kesejahteraan (wellbeing) di seluruh lapisan
+                        masyarakat. Kami percaya bahwa sebuah komunitas yang
+                        sehat, beretika, dan penuh integritas hanya dapat dibangun
+                        melalui pendidikan yang mendalam, dukungan emosional, dan
+                        keterlibatan aktif dalam isu-isu moral yang penting dalam
+                        dunia pendidikan saat ini.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="./images/WhatsApp Image 2024-11-21 at 15.04.23_478d7d48.jpg" alt="Slide 2" style="width:100%">
+                    <div class="text text-xl">Didirikan dengan semangat untuk menciptakan dunia yang
+                        lebih adil dan penuh kepedulian, Ethicare Initiatives berfokus
+                        pada pengembangan di bidang moralitas, etika, pendidikan
+                        dan wellbeing melalui berbagai inisiatif, termasuk program
+                        pendidikan, pelatihan, dan advokasi.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="./images/WhatsApp Image 2024-11-21 at 15.07.55_42e6b963.jpg" alt="Slide 3" style="width:100%">
+                    <div class="text text-xl">Kami bekerja sama
+                        dengan pesantren dan panti asuhan untuk memberikan alat
+                        dan sumber daya yang dibutuhkan agar setiap individu dapat
+                        menjalani hidup yang berlandaskan pada prinsip-prinsip etika
+                        yang kuat dan kesejahteraan mental yang seimbang. Ethicare
+                        Initiatives mengundang Anda untuk bergabung dengan kami
+                        dalam perjalanan ini. Bersama-sama, kita dapat membangun
+                        komunitas yang lebih peduli, adil, dan sejahtera, di mana nilai-
+                        nilai etika dan kesejahteraan menjadi dasar bagi segala tindakan kita.</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
             </div>
-            <ul class="cards">
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__image card__image--pertemuanPerdana"></div>
-                    <div class="card__content">
-                      <div class="card__title">Pertemuan perdana kegiatan belajar mengajar anak-anak bersama Ethicare!</div>
-                      <p class="card__text">Anak-anak sedang membacakan cita-cita mereka dan memberikan semangat kepada teman-teman di depan kelas dengan antusias dan percaya diri.</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__image card__image--harapanAnak"></div>
-                    <div class="card__content">
-                      <div class="card__title">Harapan anak-anak untuk Ethicare.</div>
-                      <p class="card__text">Sebelum memulai kegiatan belajar mengajar anak-anak menuliskan harapan mereka untuk Ethicare di papan tulis.
-                                            Melalui kegiatan ini dapat tersampaikan harapan sederhana mereka untuk dengan sekeras mungkin akan kami wujudkan kelak.</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__image card__image--afterSchool"></div>
-                    <div class="card__content">
-                      <div class="card__title">After School Pictures!!</div>
-                      <p class="card__text">Setelah kegiatan belajar mengajar terdapat rutinitas sederhana yang kerap kami lakukan, yaitu mengambil gambar bersama.
-                                            Kegiatan ini bertujuan untuk mengabadikan hangatnya momen kebersamaan yang kami miliki.</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
         </section>
 
+        <section id="our-mission">
+            <h2 class="center white text-3xl bold">Our Mission</h2>
+            <article class=" article-container">
+                <div class="article-text justify white text-2xl drop-cap">
+                    Dalam kehidupan sehari-hari, kita seringkali dihadapkan pada berbagai situasi yang menuntut kita untuk berperilaku sopan dan 
+                    beretika. Namun, seringkali etika dan moral dipahami hanya sebagai aturan atau norma kesopanan yang harus diikuti, tanpa 
+                    mempertimbangkan kesejahteraan diri sendiri maupun orang lain. Kesadaran ini mendorong kami untuk mendirikan sebuah organisasi 
+                    yang tidak hanya menekankan pentingnya moral dan etika, tetapi juga menyoroti peran krusial kesejahteraan atau wellbeing dalam 
+                    setiap tindakan dan perilaku kita.
+                <br>
+            </article>
 
+            <article class="article-container layout">
+                <div class="article-text grow1">
+                    <div class="justify white text-2xl">
+                        Organisasi ini berdiri dengan keyakinan bahwa “memanusiakan manusia” tidak hanya berarti berperilaku sopan kepada 
+                        orang lain, tetapi juga dimulai dari kesadaran akan kesejahteraan diri sendiri. Memahami dan menghargai wellbeing 
+                        diri sendiri adalah langkah pertama dalam membangun hubungan yang sehat dan saling menghargai dengan orang lain. 
+                        Dengan demikian, etika dan moral tidak lagi dipandang sebagai kewajiban semata, tetapi sebagai refleksi dari 
+                        pemahaman yang mendalam tentang pentingnya kesejahteraan bersama. Kami percaya bahwa melalui pemahaman ini, kita 
+                        dapat menciptakan masyarakat yang lebih baik, di mana setiap individu tidak hanya berperilaku baik karena aturan, 
+                        tetapi juga karena menyadari makna di balik perilaku tersebut, untuk terus berbuat baik dan memanusiakan sesama. 
+                        Dengan demikian, melalui program-program dan kegiatan yang kami selenggarakan, kami berharap dapat menanamkan 
+                        kesadaran ini sejak dini, terutama di kalangan anak-anak dan remaja, agar mereka dapat tumbuh menjadi individu yang 
+                        tidak hanya beretika dan bermoral, tetapi juga menghargai wellbeing mereka sendiri dan orang lain untuk bersama 
+                        memanusiakan manusia.
+                    </div>
+                </div>
+                <div class="article-image grow1">
+                    <img src="./images/20241116_105248.jpg" alt="Our Mission">
+                </div>
+            </article>
+
+        </section>
     </main>
 
     <footer>
-      <div class="footer-container">
-        <p style="color: #55877e;" class="bold">&copy; 2024 Ethicare Initiatives. All Rights Reserved.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/ethicare-initiatives/" class="social-icon">
-            <img src="images/linkedin.png" alt="LinkedIn" class="social-icon-image">
-          </a>
-          <a href="mailto:ethicareinitiatives@gmail.com" class="social-icon">
-            <img src="images/email.png" alt="Email" class="social-icon-image">
-          </a>
-          <a href="https://www.instagram.com/ethicare_id/" class="social-icon">
-            <img src="images/instagram.png" alt="Instagram" class="social-icon-image">
-          </a>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:info@ethicare.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2024 Ethicare Initiatives. All rights reserved.</p>
         </div>
-      </div>
     </footer>
-    
 
+    <script src="./script/scripts.js"></script>
 </body>
+
 </html>

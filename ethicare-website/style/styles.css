@@ -1,389 +1,264 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9d1e4;
-}
-
-.layout {
-    width: 100%;
-  
-    display: flex;
-    gap: 16px;
-}
-  
-.grow1 { flex-grow: 1; }
-  
-.sidebar { grid-area: sidebar; }
-.body { grid-area: body; }
-.header {
-    center
-    padding: 20px;
-}
-
-.transparent-image {
-    opacity: 0.5;
-}
-
-img {
-    width: 200px; /* Set the desired width */
-    height: auto; /* Maintain the aspect ratio */
-}
-
-nav ul {
-    list-style-type: none;      /* Remove bullets */
-    padding: 0;                /* Remove default padding */
-    margin: 0;                 /* Remove default margin */
-    text-align: center;        /* Center the list */
-}
-
-nav li {
-    display: inline-block;     /* Align items horizontally */
-    margin: 0 15px;            /* Add spacing between items */
-}
-
-nav a {
-    text-decoration: none;     /* Remove underline from links */
-    color: #55877e;               /* Set link color */
-    font-weight: bold;         /* Bold text */
-}
-nav a:hover {
-    color: #ffebbd;            /* Change color on hover */
-}
-
-/* First Section */
-@keyframes slide-top {
-    0% {
-        -webkit-transform: translateY(100px);
-        transform: translateY(100px);
-    }
-    100% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-}
-.slide-top{animation:slide-top 1s cubic-bezier(.25,.46,.45,.94) both}
-
-.first-section {
-    position: relative; /* Make the section relative to position the overlay */
-    background-image: url('../images/IMG-20241116-WA0020\(darkened\).jpg'); /* Path to your image */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-size: 95%; /* Adjust the background image size */
-    height: 15cm; /* Optional: Sets the height of the section */
-    display: flex; /* To align the content vertically and horizontally */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    padding: 20px; /* Adds space between the content and the edges */
-}
-
-.first-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(249, 209, 228, 0.5); /* Pink overlay with 50% opacity */
-    z-index: 1; /* Places the overlay beneath the text */
-}
-
-.first-section-content {
-    position: relative; /* Ensures the text is above the overlay */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    z-index: 2; /* Ensures text is above the overlay */
-    transition: transform 0.3s ease;
-}
-  
-.first-section-content:hover {
-    transform: scale(1.1); /* Grows the element to 110% of its size */
-}
-
-/* Optional: Add some responsiveness */
-@media (max-width: 768px) {
-    .section-center {
-        flex-direction: column; /* Stack text and image on top of each other on small screens */
-    }
-}
-
-/* Second Section */
-.second-section {
-    padding: 20px;
-}
-.grow1 { flex-grow: 1; }
-
-img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
-  
-  .btn {
-    background-color: white;
-    border: 1px solid @gray-light;
-    //border-radius: 1rem;
-    color: @gray-dark;
-    padding: 0.5rem;
-    text-transform: lowercase;
-  }
-  
-  .btn--block {
-    display: block;
-    width: 100%;
-  }
-   
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .cards__item {
-    display: flex;
-    padding: 1rem;
-    @media(min-width: 40rem) {
-      width: 50%;
-    }
-    @media(min-width: 56rem) {
-      width: 33.3333%;
-    }
-  }
-  
-  .card {
-    border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    }
-  
-  .card__content {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .card__image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    //filter: saturate(180%);
-    overflow: hidden;
-    position: relative;
-    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 56.25%; // 16:9 aspect ratio
-    }
-    @media(min-width: 40rem) {
-      &::before {
-        padding-top: 66.6%; // 3:2 aspect ratio
-      }
-    }
-}
-
-.card__image--pertemuanPerdana {
-    background-image: url(../images/WhatsApp\ Image\ 2024-11-21\ at\ 14.57.26_f49b60ec.jpg);
-    background-color: #f19eb9;
-}
-.card__image--harapanAnak {
-    background-image: url(../images/WhatsApp\ Image\ 2024-11-21\ at\ 15.04.23_478d7d48.jpg);
-}
-.card__image--afterSchool {
-    background-image: url(../images/WhatsApp\ Image\ 2024-11-21\ at\ 15.07.55_42e6b963.jpg);
-}
-  
-  
-.card__title {
-    color: @gray-dark;
-    font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-  
-.card__text {
-    flex: 1 1 auto;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-}
-
-
-.banner img {
-    width: 100%;          /* Make the image fill the full width */
-    height: auto;         /* Maintain the aspect ratio */
-    display: block;       /* Remove extra space below the image */
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Set the font family */
-/* Font Size Utility Classes */
-.font-xs {
-    font-size: 12px; /* Extra Small */
-}
-
-.font-sm {
-    font-size: 14px; /* Small */
-}
-
-.font-md {
-    font-size: 16px; /* Medium (default) */
-}
-
-.font-lg {
-    font-size: 20px; /* Large */
-}
-
-.font-xl {
-    font-size: 24px; /* Extra Large */
-}
-
-.font-xxl {
-    font-size: 32px; /* Double Extra Large */
-}
-
-/* Utility classes for text styles */
-.italic {
-    font-style: italic;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.strikethrough {
-    text-decoration: line-through;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.lowercase {
-    text-transform: lowercase;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.spacing {
-    letter-spacing: 2px; /* Adjust letter spacing as needed */
-}
-
-.line-height {
-    line-height: 1.5; /* Adjust line height as needed */
-}
-
-
-* {
+body {
+    font-family: 'Nagoda', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.background-image-container {
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    background-image: url('images/IMG-20241116-WA0020.jpg');
-    background-size: cover; /* Ensure the image covers the entire container */
-    background-position: center; /* Center the background image */
-    opacity: 0.5; /* 50% opacity */
-}
-
-
-<!-- Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer -->
-footer {
-        background-color: #333333; /* Dark background color */
-        color: white;           /* White text color */
-        padding: 20px;          /* Padding around the footer content */
-        text-align: center;     /* Center-align the text */
-}
-
-.footer-container {
     display: flex;
     flex-direction: column;
-    align-items: left; /* Horizontally center the content */
-    justify-content: center; /* Vertically center the content */
-    text-align: left; /* Center the text */
-    padding: 20px;
+    min-height: 100vh;
+    background-color: #f19eb9; /* Change background color */
 }
-      
-.footer-container p,
-.footer-container .social-links {
-    position: relative; /* Ensures text is above the background */
-    z-index: 1; /* Places text above the background */
+
+header {
+    color: white;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure header takes full width */
+    position: relative;
 }
-      
-.footer-container::before {
-    text-align: left;
-    content: '';
+
+.header-logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0; /* Remove margin */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between nav links and hamburger */
+    align-items: center; /* Vertically center items */
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #333; /* Background color for navbar */
+    position: relative;
+    z-index: 997; /* Below the hamburger menu */
+}
+
+/* Main Navigation Links */
+.navbar ul#nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Links */
+.navbar ul#nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px; /* Reduced padding for multi-line text */
+    display: block;
+    white-space: normal; /* Allow text to wrap */
+    text-align: center; /* Center the text within the link */
+    /* Ensure width is based on content */
+    width: auto;
+    /* Optional: Set a minimum width if desired */
+    min-width: 80px; /* Adjust as needed */
+}
+
+/* Adjust Spacing Between Navbar Items */
+.navbar ul#nav-links li {
+    margin: 0 0.5rem; /* Reduced margin for tighter spacing */
+}
+
+.navbar ul#nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+}
+
+.navbar ul#nav-links li a:hover {
+    background-color: #f4b4c9;
+    border-radius: 4px;
+}
+
+.burger-menu-content li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Ensure main navigation doesn't overlap with hamburger menu */
+.navbar {
+    position: relative;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .navbar ul#nav-links {
+        display: none; /* Hide the standard nav links on small screens */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Ensure hamburger menu is visible and aligned */
+        align-items: center;
+    }
+}
+
+main {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section {
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 0 20px; /* Add padding to the sides */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.home-container {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('../images/IMG-20241116-WA0020(darkened).jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire container */
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ; /* Optional: adds a dark overlay to improve text contrast */
-    z-index: 0; /* Places the overlay beneath the text */
+    background-color: rgba(241, 158, 185, 0.5); /* Pink overlay with 50% opacity */
 }
-      
-.social-links {
+
+.home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+footer {
+    color: white;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center;
     display: flex;
-    justify-content: center; /* Horizontally center the social icons */
-    align-items: center;     /* Vertically center the social icons */
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure footer takes full width */
 }
 
-.social-icon {
-    margin: 0 10px; /* Add space between the icons */
+.footer-container {
+    position: relative;
+    width: 100%;
 }
 
-.social-icon-container {
-    text-align: center; /* Horizontally center the content */
-    line-height: 50px;  /* Match the container's height for vertical centering */
-    height: 50px;       /* Set the height of the container */
+.footer-logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0; /* Remove margin */
 }
 
-.social-icon-image {
-    width: 36px; /* Set the desired width */
-    vertical-align: middle; /* Align the image vertically */
-    display: inline-block;  /* Align items horizontally */
+.social-icons {
+    margin: 1rem 0;
 }
-  
-.social-icon:hover .social-icon-image {
-    filter: brightness(0.8); /* Darken the image on hover */
-    height: auto;           /* Maintain aspect ratio */
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #ee88a9;
+    position: relative;
+}
+
+/* Navbar links */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    flex: 1;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #f4b4c9;
+}
+
+/* Burger icon */
+.navbar .icon {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+    .navbar.responsive ul {
+        display: flex;
+    }
+    .navbar .icon {
+        display: block;
+    }
+    .navbar li {
+        text-align: left;
+    }
 }

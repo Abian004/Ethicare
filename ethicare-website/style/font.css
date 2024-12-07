@@ -1,0 +1,128 @@
+/* Import Nagoda font */
+@import url('https://fonts.googleapis.com/css2?family=Nagoda:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Nagoda', sans-serif;
+}
+
+/* Utility classes for font styles */
+.bold {
+    font-weight: 700;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Utility classes for font sizes */
+.drop-cap::first-letter {
+    -webkit-initial-letter: 4;
+            initial-letter: 4;
+    color: #cee6f4;
+    font-weight: bold;
+    margin-right: .75em;
+}
+
+.text-xs {
+    font-size: 0.75rem; /* 12px */
+}
+
+.text-sm {
+    font-size: 0.875rem; /* 14px */
+}
+
+.text-base {
+    font-size: 1rem; /* 16px */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* 18px */
+}
+
+.text-xl {
+    font-size: 1.25rem; /* 20px */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* 24px */
+}
+
+.text-3xl {
+    font-size: 1.875rem; /* 30px */
+}
+
+.text-4xl {
+    font-size: 2.25rem; /* 36px */
+}
+
+.text-5xl {
+    font-size: 3rem; /* 48px */
+}
+
+/* Utility classes for text alignment */
+.justify {
+    text-align: justify;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+/* Utility classes for text colors */
+.white {
+    color: #ffffff;
+}
+
+.black {
+    color: #000000;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.green {
+    color: #00ff00;
+}
+
+.blue {
+    color: #0000ff;
+}
+
+.yellow {
+    color: #ffff00;
+}
+
+/* Add more color classes as needed */

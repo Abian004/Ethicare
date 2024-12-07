@@ -1,0 +1,49 @@
+/* Existing Article Styles */
+
+/* Article Container */
+.article-container {
+    margin: 2rem 0;
+}
+
+/* Layout Utility */
+.layout {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Flex Grow Utility */
+.grow1 {
+    flex-grow: 1;
+}
+
+/* Article Text */
+.article-text {
+    /* Removed margin-right to utilize flex gap */
+}
+
+/* Article Image */
+.article-image {
+    text-align: right;
+}
+
+.article-image img {
+    height: 400px; /* Adjust as needed */
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-image img {
+        height: auto;
+        max-width: 100%;
+    }
+}

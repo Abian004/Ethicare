@@ -1,5 +1,11 @@
-/* Import Nagoda font */
-@import url('https://fonts.googleapis.com/css2?family=Nagoda:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Nagoda';
+    src: url('../Nagoda\ File/Nagoda.woff') format('woff'), /* Modern browsers */
+         url('../Nagoda\ File/Nagoda.ttf') format('truetype'), /* Older browsers */
+         url('../Nagoda\ File/Nagoda.otf') format('opentype'); /* Optional fallback */
+    font-weight: 400; /* Normal weight */
+    font-style: normal;
+}
 
 body {
     font-family: 'Nagoda', sans-serif;
@@ -167,4 +173,9 @@ body {
 .shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* Add more color classes as needed */
+
+.rotate-90 {
+    display: inline-block; /* Ensures rotation works properly */
+    transform: rotate(90deg);
+    transform-origin: center; /* Rotates around the center of the element */
+}

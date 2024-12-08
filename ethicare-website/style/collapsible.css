@@ -1,0 +1,33 @@
+/* Collapsible button styles */
+.collapsible {
+    background-color: #ee88a9;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #d977a3;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #91ddcf;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Center the collapsible button */
+#our-team .collapsible {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.50rem; /* 24px */
+    font-weight: 700;   /* Bold */      ;
+}

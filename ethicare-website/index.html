@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style/about-slideshow.css">
     <link rel="stylesheet" href="./style/article.css">
     <link rel="stylesheet" href="./style/core-values.css">
+    <link rel="stylesheet" href="./style/collapsible.css">
     <link href="https://fonts.googleapis.com/css2?family=Nagoda:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -22,10 +23,23 @@
             <!-- Main Navigation Links -->
             <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#history">Our History</a></li>
-                <li><a href="https://forms.gle/CiaiRoYGC58jVaq78">Ethicare Benevolence</a></li>
+                <li class="dropdown">
+                    <a href="#about" class="dropbtn">About us</a>
+                    <div class="dropdown-content">
+                        <a href="#our-mission" class="dropbtn">Our Mission</a>
+                        <a href="#our-coreValues">Our Core Values</a>
+                        <div class="dropdown nested-dropdown">
+                            <a href="#our-team" class="dropbtn">Our Team</a>
+                            <div class="dropdown-content">
+                                <a href="#eChampion">Ethicare Champion</a>
+                                <a href="#eEducator">Ethicare Educator</a>
+                                <a href="#eAmbassador">Ethicare Ambassador</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#home">Ethicare Share</a></li>
+                <li><a href="#home">Ethicare Benevolence</a></li>
             </ul>
 
             <!-- Hamburger Menu Icon -->
@@ -41,7 +55,7 @@
             <div class="home-container">
                 <div class="overlay"></div>
                 <div class="home-text">
-                    <h2 class="text-7xl bold">Ethicare Initiatives</h2>
+                    <h2 class="text-7xl bold">ETHICARE INITIATIVES</h2>
                     <h3 class="text-2xl italic">Where Morality Meets Wellbeing</h3>
                 </div>
             </div>
@@ -158,6 +172,41 @@
                 </div>
                 
             </div>
+        </section>
+
+        <section id="our-team">
+            <h2 class="center text-5xl white bold shadow">Our Team</h2>
+            <button class="collapsible text-5xl">Ethicare Champion</button>
+                <div class="content justify white text-2xl drop-cap shadow layout">
+                    <p>Ethicare Champion adalah kelompok relawan yang penuh semangat dan dedikasi memilih untuk bergabung sebagai staf dalam 
+                        kepengurusan organisasi Ethicare. Sebagai Ethicare Champion, mereka tidak hanya memberikan waktu dan tenaga mereka 
+                        secara sukarela, tetapi juga berperan penting dalam mengelola, merencanakan, dan melaksanakan berbagai inisiatif serta 
+                        program yang diadakan oleh organisasi. Peran Ethicare Champion meliputi tanggung jawab yang bervariasi, dari membantu 
+                        divisi dalam merumuskan strategi dan menjalankan program kerja bersama dengan komitmen untuk menerapkan nilai-nilai 
+                        etika, moral, dan wellbeing yang merupakan inti dari Ethicare. Sebagai relawan yang terlibat langsung dalam 
+                        kepengurusan, mereka memainkan peran krusial dalam memastikan bahwa semua kegiatan organisasi berjalan dengan baik dan 
+                        memberikan dampak positif yang signifikan bagi masyarakat.</p>
+                    
+                    <h4 class="center">Divisions</h3>
+                    <section class="layout-ourTeam">
+                        <div>Education and Training</div>
+                        <div>Communications and Outreach</div>
+                        <div>Research and Development</div>
+                        <div>Community Engagement</div>
+                        <div>Design</div>
+                        <div>Treasury</div>
+                        <div>Curriculum</div>
+                    </section>
+                </div>
+
+            <button class="collapsible text-5xl">Ethicare Educator</button>
+                <div class="content">
+                    <p>Team member details go here...</p>
+                </div>
+            <button class="collapsible text-5xl">Ethicare Ambassador</button>
+                <div class="content">
+                    <p>Team member details go here...</p>
+                </div>
         </section>
     </main>
 

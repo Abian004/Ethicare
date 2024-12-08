@@ -3,6 +3,11 @@ document.addEventListener('click', function(event) {
     // Removed hamburger menu related code
 });
 
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('responsive');
+});
+
 // Slideshow functionality
 let slideIndex = 1;
 showSlides(slideIndex);

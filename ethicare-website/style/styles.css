@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f19eb9; /* Change background color */
+    background: linear-gradient(180deg, #f19eb9, #91ddcf, #ffebbd); /* Gradient background */
 }
 
 header {

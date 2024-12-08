@@ -83,6 +83,41 @@ body {
     font-size: 3rem; /* 48px */
 }
 
+/* 6xl */
+.text-6xl {
+    font-size: 3.75rem; /* 60px */
+}
+
+/* 7xl */
+.text-7xl {
+    font-size: 4.5rem; /* 72px */
+}
+
+/* 8xl */
+.text-8xl {
+    font-size: 6rem; /* 96px */
+}
+
+/* 9xl */
+.text-9xl {
+    font-size: 8rem; /* 128px */
+}
+
+/* 10xl */
+.text-10xl {
+    font-size: 10rem; /* 160px */
+}
+
+/* 11xl */
+.text-11xl {
+    font-size: 12rem; /* 192px */
+}
+
+/* 12xl */
+.text-12xl {
+    font-size: 14rem; /* 224px */
+}
+
 /* Utility classes for text alignment */
 .justify {
     text-align: justify;
@@ -114,7 +149,7 @@ body {
 }
 
 .green {
-    color: #00ff00;
+    color: #91ddcf;
 }
 
 .blue {
@@ -125,4 +160,11 @@ body {
     color: #ffff00;
 }
 
+.pink {
+    color: #f19eb9;
+}
+
+.shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 /* Add more color classes as needed */

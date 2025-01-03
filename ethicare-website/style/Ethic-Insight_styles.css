@@ -5,104 +5,85 @@ html, body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     background-color: #f9d1e4;
+    box-sizing: border-box; /* Include padding and borders in dimensions */
 }
 
-.layout {
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit the box-sizing rule */
+}
+
+.wrapper {
     width: 100%;
-  
-    display: flex;
-    gap: 16px;
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center-align the container */
+    padding: 0 1rem; /* Add padding for better spacing */
 }
-
-
-nav ul {
-    list-style-type: none;      /* Remove bullets */
-    padding: 0;                /* Remove default padding */
-    margin: 0;                 /* Remove default margin */
-    text-align: center;        /* Center the list */
-}
-
-nav li {
-    display: inline-block;     /* Align items horizontally */
-    margin: 0 15px;            /* Add spacing between items */
-}
-
-nav a {
-    text-decoration: none;     /* Remove underline from links */
-    color: #55877e;               /* Set link color */
-    font-weight: bold;         /* Bold text */
-}
-nav a:hover {
-    color: #ffebbd;            /* Change color on hover */
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-.navbar {
-    height: 60px;
-    background: #333;
-}
-.article-box {
-    margin-top: 0; /* Avoid conflicts */
-}
-
 
 .article-list {
-    display: flex; /* Arrange posts horizontally */
+    display: flex; /* Arrange articles in a row */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    gap: 0.5rem; /* Reduce space between posts */
-    justify-content: space-between; /* Distribute articles evenly */
-}   
+    gap: 1rem; /* Add spacing between articles */
+    justify-content: space-between; /* Evenly distribute articles */
+}
 
 .box.excerpt {
-    flex: 1 1 calc(33.333% - 0.5rem); /* Adjust width for 3 articles in a row */
-    max-width: calc(33.333% - 0.5rem); /* Prevent exceeding row width */
-    box-sizing: border-box; /* Include padding and border in width */
-    background: #ee88a9; /* Optional: background for better visuals */
-    padding: 10px; /* Inner padding */
-    border-radius: 5px; /* Optional: rounded edges */
+    flex: 1 1 calc(33.333% - 1rem); /* Allow 3 columns with gap */
+    max-width: calc(33.333% - 1rem); /* Ensure consistent max width */
+    background: #ee88a9;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .box.excerpt img {
-    width: 100%; /* Ensure images fit within the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: rounded edges */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .date {
-    color: black; /* Bright orange */
-    font-weight: bold; /* Optional: Makes the date bold */
+    color: black;
+    font-weight: bold;
 }
 
+
+.article-list h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; 
+    text-align: center; 
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+
 article h3 a {
-    color: #2C3E50; /* Dark blue for the article title */
+    color: #2C3E50  ;
     text-decoration: none;
 }
 
+
 article h3 a:hover {
-    color: #2980B9; /* Light blue on hover */
+    color: #2980B9;
 }
 
-/* Style for Paragraph Text */
 article p {
-    color: black; /* Gray text */
-    line-height: 1.6; /* Optional: Improves readability */
+    color: black;
+    line-height: 1.6;
 }
 
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .box.excerpt {
-        flex: 1 1 calc(50% - 0.5rem); /* Two articles per row on medium screens */
-        max-width: calc(50% - 0.5rem);
+        flex: 1 1 calc(50% - 1rem); /* Adjust to 2 columns */
+        max-width: calc(50% - 1rem);
     }
 }
 
 @media (max-width: 480px) {
     .box.excerpt {
-        flex: 1 1 100%; /* One article per row on small screens */
+        flex: 1 1 100%; /* Adjust to 1 column */
         max-width: 100%;
     }
 }

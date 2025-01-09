@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff5f3, #ffddd2, #fff5f3); /* Gradient background */
+}
+
+header {
+  color: white;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure header takes full width */
+  position: relative;
+}
+
+footer {
+  color: #91ddcf;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure footer takes full width */
+}
